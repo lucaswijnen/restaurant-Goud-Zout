@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item bewerken</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="page">
+    
+  <header class="header">
+
+    <div class="logo">
+        <img src="/img/logo-Goud&Zout.png" class="logo-img" alt="Logo">
+    </div>
+
+    <nav class="menu">
+        <a href="/index.html">Home</a>
+        <a href="/pages/menu.html">Menu</a>
+        <a href="/pages/overons.html">Over ons</a>
+        <a href="/pages/contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+<main class="add-container">
+  <h1 class="add-title">Item bewerken</h1>
+  <form method="post" action="/pages/toevoegen.html" class="add-form">
+    <label>Naam</label>
+
+    <input type="text" name="title" required>
+
+    <label>Prijs (€)</label>
+
+    <input type="number" name="price" step="0.01" min="0" required>
+
+    <label>Beschrijving</label>
+
+    <textarea name="description" rows="4" required></textarea>
+
+    <label>Afbeelding URL</label>
+
+    <input type="url" name="image_url" placeholder="hier de link van de afbeelding">
+
+    <div class="form-actions">
+      <button type="submit" name="toevoegen" class="add-button">opslaan</button>
+      <a class="back-button" href="/pages/admin-pannel.html">Terug</a>
+    </div>
+  </form>
+</main>
+</body>
+</html>

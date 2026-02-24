@@ -1,0 +1,540 @@
+.page {
+    background: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    transform: translateY(-50px);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: orange;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Begin-Contact */
+
+.contact-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    color: #333;
+}
+
+.contact-info {
+    text-align: center;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.openingstijden {
+    flex: 1;
+}
+
+.openingstijden h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.openingstijden table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.openingstijden td {
+    padding: 4px 8px;
+}
+
+/* Einde-Contact */
+
+
+/* Begin-overons */
+.overons-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: #333;
+}
+
+.overons-text {
+    flex: 1;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.catering-section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.catering-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: orange;
+}
+
+.catering-section p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.overons-text2 {
+    color: orange;
+}
+
+.bezorgen-section{
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: #333;
+}
+
+.bezorgen-title{
+    font-size: 2rem;
+    margin: 0 0 16px 0;
+    color: orange;
+}
+
+.bezorgen-text{
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin: 0 0 22px 0;
+}
+
+.menukaart-button{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+.menukaart-icon{
+    font-size: 18px;
+}
+
+/* Einde-overons */
+
+
+/* Begin-header */
+
+.logo-img {
+    height: 50px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #cecbcb66;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+    color: orange;
+    transform: translateY(-5px);
+}
+
+.menu a.dikgedrukt {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 3px;
+}
+
+.login-button {
+    background: orange;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.login-button:hover {
+    background: #e67e22;
+    transform: translateY(-3px);
+}
+/* Einde-header */
+
+/* Begin-login-formulier */
+.login-form {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-button {
+    width: 100%;
+    background: orange;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.form-button:hover {
+    background: #e67e22;
+    transform: translateY(-3px);
+}
+/* Einde-login formulier */
+
+/* Begin-admin */
+.admin-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    color: #333;
+}
+
+.admin-hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    color: orange;
+}
+
+.admin-hero p {
+    margin: 0 0 20px 0;
+    color: #555;
+}
+
+.admin-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.admin-card {
+    display: block;
+    padding: 14px 18px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.admin-card:hover {
+    transform: translateY(-3px);
+    color: orange;
+    border-color: #ccc;
+}
+
+.admin-card-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+    color: orange;
+}
+
+.admin-card h3 {
+    margin: 6px 0;
+    font-size: 18px;
+}
+
+.admin-card p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+/* Einde-admin */
+
+/* Begin-toevoegen */
+.add-container {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: left;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+}
+
+
+.add-form label {
+    display: block;
+    margin: 6px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-form input,
+.add-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-actions{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.add-button,
+.back-button{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: orange;
+    color: #fff;
+    border: 0;
+    padding: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.15s ease;
+    transform-origin: center;
+}
+
+.add-button:hover,
+.back-button:hover {
+    transform: scale(1.04);
+}
+
+.add-button:active,
+.back-button:active {
+    transform: scale(0.98);
+}
+/* Einde-toevoegen */
+.product-area {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    text-align: left;
+}
+
+.product-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.product-image {
+    background: white;
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: inherit;
+}
+
+.product-title {
+    margin: 8px 0 4px;
+    font-size: 18px;
+}
+
+.product-desc {
+    margin: 0 0 6px;
+    color: #444;
+    font-size: 14px;
+}
+
+.product-price {
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.edit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid orange;
+    border-radius: 8px;
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.edit-link:hover {
+    background: orange;
+    color: #fff;
+}
+
+
+/* Einde-bewerken */
+
+/* Begin-footer */
+
+.footer {
+    background: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 60px;
+    border-top: 1px solid #cecbcb66;
+}
+
+.madeby {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Einde-footer */
+
+
+
+/* begin-menu*/
+
+.menukaart-header {
+    text-align: center;
+    margin: 60px 0 10px;
+}
+
+.menukaart-header h1 {
+    font-size: 48px;
+    color: orange;
+    font-weight: 700;
+}
+
+.zoekbalk {
+    text-align: center;
+    margin: 10px 0 30px;
+}
+
+.zoekbalk form {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.zoekbalk input[type="text"] {
+    padding: 12px 14px;
+    width: 60%;
+    max-width: 450px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.zoekbalk button {
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    border: 1px solid #ddd;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* einde menu*/
