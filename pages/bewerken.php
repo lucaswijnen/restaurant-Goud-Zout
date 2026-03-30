@@ -4,24 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verwijderen</title>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="page">
 
 <header class="header">
 
   <div class="logo">
-    <img src="/img/logo-Goud&Zout.png" class="logo-img" alt="Logo">
+    <img src="../assets/img/logo-Goud&Zout.png" class="logo-img" alt="Logo">
   </div>
 
   <nav class="menu">
-    <a href="/index.html">Home</a>
-    <a href="/menu.html">Menu</a>
-    <a href="/overons.html">Over ons</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/index.php">Home</a>
+    <a href="/pages/menu.php">Menu</a>
+    <a href="/pages/overons.php">Over ons</a>
+    <a href="/pages/contact.php">Contact</a>
   </nav>
 
-  <a href="/admin.html" class="login-button">Terug</a>
+  <a href="/admin.php" class="login-button">Terug</a>
   
 </header>
 
@@ -43,7 +43,7 @@
     <p class="product-desc">Heerlijke verse friet</p>
     <p class="product-price">€ 3.50</p>
 
-    <a class="edit-link" href="/pages/item-edit.html">Bewerken</a>
+    <a class="edit-link" href="/pages/item-edit.php">Bewerken</a>
   </article>
 
   <article class="product-card">
@@ -55,7 +55,7 @@
     <p class="product-desc">Heerlijke verse friet</p>
     <p class="product-price">€ 3.50</p>
 
-    <a class="edit-link" href="/pages/item-edit.html">Bewerken</a>
+    <a class="edit-link" href="/pages/item-edit.php">Bewerken</a>
   </article>
 
   <article class="product-card">
@@ -67,7 +67,7 @@
     <p class="product-desc">Heerlijke verse friet</p>
     <p class="product-price">€ 3.50</p>
 
-    <a class="edit-link" href="/pages/item-edit.html">Bewerken</a>
+    <a class="edit-link" href="/pages/item-edit.php">Bewerken</a>
   </article>
 
 

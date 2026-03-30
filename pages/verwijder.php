@@ -4,24 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verwijderen</title>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="page">
 
 <header class="header">
 
   <div class="logo">
-    <img src="/img/logo-Goud&Zout.png" class="logo-img" alt="Logo">
+    <img src="../assets/img/logo-Goud&Zout.png" class="logo-img" alt="Logo">
   </div>
 
   <nav class="menu">
-    <a href="/index.html">Home</a>
-    <a href="/menu.html">Menu</a>
-    <a href="/overons.html">Over ons</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/index.php">Home</a>
+    <a href="/menu.php">Menu</a>
+    <a href="/overons.php">Over ons</a>
+    <a href="/contact.php">Contact</a>
   </nav>
 
-  <a href="/admin.html" class="login-button">Terug</a>
+  <a href="/admin.php" class="login-button">Terug</a>
   
 </header>
 
@@ -34,6 +34,13 @@
 
 <main class="product-area">
 
+ <?php
+ foreach ($result as $persoon) {
+
+ 
+
+?>
+
   <article class="product-card">
     <div class="product-image">
       <img src="/img/friet.jpg" alt="">
@@ -43,6 +50,21 @@
     <p class="product-price">€ 3.50</p>
     <a class="edit-link" href="#">Verwijderen</a>
   </article>
+
+<?php
+echo $persoon['voornaam']; // alle voor namen alleen uitgeprint
+
+
+ }
+
+?>
+
+</main>
+
+</body>
+</html>
+
+
 
   <article class="product-card">
     <div class="product-image">
@@ -54,7 +76,12 @@
     <a class="edit-link" href="#">Verwijderen</a>
   </article>
 
-</main>
 
-</body>
-</html>
+<input type="text" hidden name="personeelnummer" value="<?php $persoon['personeelnummer']; ?>">
+
+  <input type="text" name="title" placeholder="title" value="<?php echo $persoon['title'] ?> "> 
+  // dan zou je zeggeen persoon naar menukaart veranderen . 
+
+  $stmt->bindparam('personeelnummer', $personeelnuimmer); 
+
+  post ook personeel 
