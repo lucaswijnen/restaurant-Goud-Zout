@@ -1,7 +1,7 @@
 <?php
 include "../DBcalls/conn.php";
-
 include "../DBcalls/read.php";
+
 ?>
 
 <!DOCTYPE html>

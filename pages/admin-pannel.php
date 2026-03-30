@@ -1,11 +1,10 @@
 <?php
-include "conn.php";
 Session_start();
 
-$sql = "SELECT * FROM menukaart";
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-$result = $stmt->fetchAll();
+include "../DBcalls/conn.php";
+include "../DBcalls/read.php";
+include "../DBcalls/delete.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -49,53 +48,46 @@ $result = $stmt->fetchAll();
         <h3>Item toevoegen</h3>
         <p>Voeg een nieuw gerecht of bericht toe.</p>
       </a>
-
-      <a class="admin-card" href="/pages/bewerken.php">
-        <div class="admin-card-icon">
-          <ion-icon name="create-outline"></ion-icon>
-        </div>
-        <h3>Item bewerken</h3>
-        <p>Pas bestaande items aan.</p>
-      </a>
-
-      <a class="admin-card" href="/pages/verwijder.php">
-        <div class="admin-card-icon">
-          <ion-icon name="trash-outline"></ion-icon>
-        </div>
-        <h3>Item verwijderen</h3>
-        <p>Verwijder wat je niet meer nodig hebt.</p>
-      </a>
     </section>
   </main>
 
+<main class="product-area">
 
-<h1>Admin paneel</h1>
+  <?php foreach ($result as $product) { ?>
+<article class="product-card">
+    <div class="product-image">
+      <img src="<?= $product['image_url'] ?>">
+    </div>
 
-<a href="/pages/toevoegen.php">Product toevoegen</a>
+    <h3 class="product-title"><?= $product['title'] ?></h3>
+    <p class="product-desc"><?= $product['description'] ?></p>
+    <p class="product-price">€ <?= $product['price'] ?></p>
 
-<div class="product-area">
+    <div class="product-actions">
 
-<?php foreach ($result as $product) { ?>
+      <a class="admin-card" href="/pages/item-edit.php?id=<?= $product['id'] ?>">
+        <div class="admin-card-icon">
+          <ion-icon name="create-outline"></ion-icon>
+        </div>
+        <span>Bewerken</span>
+      </a>
 
-<div class="product-card">
+      <a class="admin-card" href="/pages/delete.php?id=<?= $product['id'] ?>">
+        <div class="admin-card-icon">
+          <ion-icon name="trash-outline"></ion-icon>
+        </div>
+        <span>Verwijderen</span>
+      </a>
 
-<img src="<?= $product['image_url'] ?>" width="150">
+    </div>
 
-<h3><?= $product['title'] ?></h3>
+</article> 
+  <?php } ?>
 
-<p><?= $product['description'] ?></p>
+</main>
 
-<p>€ <?= $product['price'] ?></p>
 
-<a href="/pages/item-edit.php?id=<?= $product['id'] ?>">Bewerken</a>
 
-<a href="/pages/delete.php?id=<?= $product['id'] ?>">Verwijderen</a>
-
-</div>
-
-<?php } ?>
-
-</div>
 
 </body>
 </html>

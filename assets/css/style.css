@@ -538,3 +538,42 @@
     cursor: pointer;
 }
 /* einde menu*/
+
+
+
+.product-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.product-actions .admin-card {
+    flex: 1; /* zelfde breedte voor alle knoppen */
+    text-align: center;
+    padding: 10px 0;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.product-actions .admin-card:hover {
+    transform: translateY(-3px);
+    color: orange;
+    border-color: #ccc;
+}
+
+.product-actions .admin-card-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: orange;
+}
+
+.product-actions .admin-card span {
+    display: block;
+    font-size: 14px;
+}
