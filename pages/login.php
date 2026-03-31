@@ -1,7 +1,5 @@
 <?php
 session_start();
-include "../DBcalls/conn.php";
-include "../DBcalls/inloggen.php";
 
 ?>
 
@@ -31,7 +29,7 @@ include "../DBcalls/inloggen.php";
 
     </header> 
 
-<form class="login-form" method="POST" action="/pages/admin-pannel.php">
+<form class="login-form" method="POST" action="../DBcalls/inloggen.php">
   <h2>Inloggen</h2>
   <label>Email</label>
   <input type="email" name="email" required>
