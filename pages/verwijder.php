@@ -80,7 +80,7 @@ echo $persoon['voornaam']; // alle voor namen alleen uitgeprint
 <input type="text" hidden name="personeelnummer" value="<?php $persoon['personeelnummer']; ?>">
 
   <input type="text" name="title" placeholder="title" value="<?php echo $persoon['title'] ?> "> 
-  // dan zou je zeggeen persoon naar menukaart veranderen . 
+  // dan zou je zeggen persoon naar menukaart veranderen.
 
   $stmt->bindparam('personeelnummer', $personeelnuimmer); 
 

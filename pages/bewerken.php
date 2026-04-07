@@ -1,77 +1,66 @@
+<?php
+include "../DBcalls/update.php";
+include "../DBcalls/conn.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verwijderen</title>
-<link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item bewerken</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="page">
+    
+  <header class="header">
 
-<header class="header">
-
-  <div class="logo">
-    <img src="../assets/img/logo-Goud&Zout.png" class="logo-img" alt="Logo">
-  </div>
-
-  <nav class="menu">
-    <a href="/index.php">Home</a>
-    <a href="/pages/menu.php">Menu</a>
-    <a href="/pages/overons.php">Over ons</a>
-    <a href="/pages/contact.php">Contact</a>
-  </nav>
-
-  <a href="/admin.php" class="login-button">Terug</a>
-  
-</header>
-
-
-<div class="page-title">
-    <h1 class="title">
-        Goud & Zout producten verwijderen
-    </h1>
-</div>
-
-<main class="product-area">
-
-  <article class="product-card">
-    <div class="product-image">
-      <img src="/img/friet.jpg" alt="">
+    <div class="logo">
+        <img src="../assets/img/logo-Goud&Zout.png" class="logo-img" alt="Logo">
     </div>
 
-    <h3 class="product-title">Friet Klein</h3>
-    <p class="product-desc">Heerlijke verse friet</p>
-    <p class="product-price">€ 3.50</p>
+    <nav class="menu">
+        <a href="/index.php">Home</a>
+        <a href="/pages/menu.php">Menu</a>
+        <a href="/pages/overons.php">Over ons</a>
+        <a href="/pages/contact.php">Contact</a>
+    </nav>
 
-    <a class="edit-link" href="/pages/item-edit.php">Bewerken</a>
-  </article>
+  </header>
 
-  <article class="product-card">
-    <div class="product-image">
-      <img src="/img/friet.jpg" alt="">
+<main class="add-container">
+  <h1 class="add-title">Item bewerken</h1>
+  <form method="post" action="/pages/toevoegen.php" class="add-form">
+    <label>Naam</label>
+
+    <input type="text" name="title" required>
+
+    <label>Prijs (€)</label>
+
+    <input type="number" name="price" step="0.01" min="0" required>
+
+    <label>Beschrijving</label>
+
+    <textarea name="description" rows="4" required></textarea>
+
+    <label>Afbeelding URL</label>
+
+    <input type="url" name="image_url" placeholder="hier de link van de afbeelding">
+
+    <div class="form-actions">
+      <button type="submit" name="toevoegen" class="add-button">opslaan</button>
+      <a class="back-button" href="/pages/admin-pannel.php">Terug</a>
     </div>
-
-    <h3 class="product-title">Friet Klein</h3>
-    <p class="product-desc">Heerlijke verse friet</p>
-    <p class="product-price">€ 3.50</p>
-
-    <a class="edit-link" href="/pages/item-edit.php">Bewerken</a>
-  </article>
-
-  <article class="product-card">
-    <div class="product-image">
-      <img src="/img/friet.jpg" alt="">
-    </div>
-
-    <h3 class="product-title">Friet Klein</h3>
-    <p class="product-desc">Heerlijke verse friet</p>
-    <p class="product-price">€ 3.50</p>
-
-    <a class="edit-link" href="/pages/item-edit.php">Bewerken</a>
-  </article>
-
-
+  </form>
 </main>
 
+<div class="section-blok">
+<div> </div>
+
+</div>
 </body>
 </html>
+
+
