@@ -43,7 +43,7 @@ include "../DBcalls/create.php";
 
     <label>Afbeelding URL</label>
 
-    <input type="url" name="image_url" placeholder="hier de link van de afbeelding" alt="photo - product">
+    <input type="text" name="image_url" placeholder="hier de link van de afbeelding" alt="photo - product">
 
     <div class="form-actions">
       <button type="submit" name="toevoegen" class="add-button">Toevoegen</button>

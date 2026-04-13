@@ -56,7 +56,7 @@ include "../DBcalls/read.php";
     <p class="product-desc"><?= $product['description'] ?></p>
     <p class="product-price">€ <?= $product['price'] ?></p>
 
-</article> 
+</article>
   <?php } ?>
 
 </main>

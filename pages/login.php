@@ -40,6 +40,3 @@ session_start();
 
 </body>
 </html>
-// op de pagina waar je wilt zijn. 
-Session_start();
-Session_destroy(); 

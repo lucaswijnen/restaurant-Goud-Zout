@@ -1,7 +1,5 @@
 <?php
 include "../DBcalls/update.php";
-include "../DBcalls/conn.php";
-
 ?>
 
 
@@ -32,22 +30,23 @@ include "../DBcalls/conn.php";
 
 <main class="add-container">
   <h1 class="add-title">Item bewerken</h1>
-  <form method="post" action="/pages/toevoegen.php" class="add-form">
+  <form method="post" action="../DBcalls/update.php" class="add-form">
+    <input type="hidden" name="id" value="<?= $product['id'] ?>">
     <label>Naam</label>
 
-    <input type="text" name="title" required>
+    <input type="text" name="title" value="<?= $product['title'] ?>" required>
 
     <label>Prijs (€)</label>
 
-    <input type="number" name="price" step="0.01" min="0" required>
+    <input type="number" name="price" step="0.01" min="0" value="<?= $product['price'] ?>" required>
 
     <label>Beschrijving</label>
 
-    <textarea name="description" rows="4" required></textarea>
+    <textarea name="description" rows="4" required><?= $product['description'] ?></textarea>
 
     <label>Afbeelding URL</label>
 
-    <input type="url" name="image_url" placeholder="hier de link van de afbeelding">
+    <input type="text" name="image_url" placeholder="hier de link van de afbeelding" value="<?= $product['image_url'] ?>">
 
     <div class="form-actions">
       <button type="submit" name="toevoegen" class="add-button">opslaan</button>
@@ -55,9 +54,6 @@ include "../DBcalls/conn.php";
     </div>
   </form>
 </main>
-
-<div class="section-blok">
-<div> </div>
 
 </div>
 </body>
